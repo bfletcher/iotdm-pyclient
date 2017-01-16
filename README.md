@@ -48,16 +48,16 @@ python http_example.py
 
 ## CoAP Examples in the Distribution
 
-CoAP examples may be seen by invoking individual tests from the module ```TS\_13\_Tests.py```.
+CoAP examples may be seen by invoking individual tests from the module ```TS_13_Tests.py```.
 For example:
 ```
-python TS\_13_\Tests.py TS13.test\_0\_CSE\_Provisioning
-\# This example actually uses HTTP but is necessary to initialize the server.
-python TS\_13\_Tests.py TS13.test\_TD\_M2M\_NH\_01\_Retrieve\_CSEBase
-\# Get CSE Base using CoAP
+python TS_13_Tests.py TS13.test_0_CSE_Provisioning
+# This example actually uses HTTP but is necessary to initialize the server.
+python TS_13_Tests.py TS13.test_TD_M2M_NH_01_Retrieve_CSEBase
+# Get CSE Base using CoAP
 ```
 
-The lack of synchronous support for calls to CoAP based procedues means that running the whole ```TS\_13\_Tests.py``` as a block will fail as the incomplete operation of earlier procedures will cause errors on subsequent procedures.
+The lack of synchronous support for calls to CoAP based procedues means that running the whole ```TS_13_Tests.py``` as a block will fail as the incomplete operation of earlier procedures will cause errors on subsequent procedures.
 
 ## Other Examples
 Various other files are included from the original distribution which do not appear to work currently:
