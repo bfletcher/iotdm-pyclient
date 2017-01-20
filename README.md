@@ -41,7 +41,7 @@ HTTP support can be included by importing iotdm_api.py - see example usage in ht
 To run the examples - install and start the IoTDM oneM2M server on localhost following the instructions at:
 https://wiki.opendaylight.org/view/IoTDM:Main#Getting_started_for_users
 
-Navigate to the route directory for the library. The HTTP examples may then be run using the command:
+Navigate to the root directory for the library. The HTTP examples may then be run using the command:
 ```
 python http_example.py
 ```
@@ -66,4 +66,4 @@ Various other files are included from the original distribution which do not app
 - SendInfo.py
 - criotdm.py
 
-Pull requets to address the current limitations and to better document the existing functioanlity are welcome.
+Pull requets to address the current limitations and to better document the existing functionality are welcome.
