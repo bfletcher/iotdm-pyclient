@@ -9,6 +9,7 @@ Modified on 01-07-2016
 '''
 
 import sys
+import threading
 from urlparse import urlparse
 import OneM2M
 import socket
@@ -19,10 +20,19 @@ import txThings.txthings.coap as coap
 # from twisted.python import log
 # import txThings.txthings.resource as resource
 
+syncEvent = threading.Event()
 
 class Agent():
 
-    def __init__(self, protocol, op, uri, payload=None, ty=None, origin=None, requestID=None):
+    def start(self):
+        print("Start reactor")
+        threading.Thread(target=reactor.run, args=(False,)).start()
+
+    def stop(self):
+        print("Stop reactor")
+        reactor.callFromThread(reactor.stop)
+
+    def request(self, protocol, op, uri, payload=None, ty=None, origin=None, requestID=None):
         self.protocol = protocol
         self.ty = ty
         self.uri = urlparse(uri)
@@ -33,17 +43,22 @@ class Agent():
         self.payload = payload
         self.origin = origin
         self.requestID = requestID
+        syncEvent.clear()
+        reactor.callFromThread(reactor.listenUDP, 0, protocol)
         if op == "post":
-            reactor.callLater(0, self.postResource)
+            reactor.callFromThread(self.postResource)
         elif op == "get":
-            reactor.callLater(0, self.getResource)
+            reactor.callFromThread(self.getResource)
         elif op == "put":
-            reactor.callLater(0, self.putResource)
+            reactor.callFromThread(self.putResource)
         elif op == "delete":
-            reactor.callLater(0, self.deleteResource)
+            reactor.callFromThread(self.deleteResource)
         else:
             print "Invalid operation"
             sys.exit(2)
+        # reactor.callFromThread(reactor.listenUDP, 0, protocol)
+        syncEvent.wait()
+        # All the above calls result in a UDP response.
 
     def postResource(self):
 
@@ -66,6 +81,7 @@ class Agent():
         d = self.protocol.request(request)
         d.addCallback(self.printResponse)
         d.addErrback(self.noResponse)
+        d.addBoth(self.releaseBlocking)
 
 
     def getResource(self):
@@ -86,6 +102,7 @@ class Agent():
         d = self.protocol.request(request)
         d.addCallback(self.printResponse)
         d.addErrback(self.noResponse)
+        d.addBoth(self.releaseBlocking)
 
 
     def putResource(self):
@@ -107,7 +124,7 @@ class Agent():
         d = self.protocol.request(request)
         d.addCallback(self.printResponse)
         d.addErrback(self.noResponse)
-
+        d.addBoth(self.releaseBlocking)
 
     def deleteResource(self):
 
@@ -126,20 +143,19 @@ class Agent():
         d = self.protocol.request(request)
         d.addCallback(self.printResponse)
         d.addErrback(self.noResponse)
-
+        d.addBoth(self.releaseBlocking)
 
     def gotIP(ip):
         return ip
-        reactor.callLater(0, reactor.stop)
-
 
     def printResponse(self, response):
         print 'Response Code: ' + coap.responses[response.code]
         print 'Payload: ' + response.payload
-        reactor.stop()
-
 
     def noResponse(self, failure):
         print 'Failed to fetch resource:'
         print failure
-        reactor.stop()
+
+    def releaseBlocking(self, _ ):
+        syncEvent.set()
+
