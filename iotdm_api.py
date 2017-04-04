@@ -19,7 +19,7 @@ class Iotdm_api():
 	    log.startLogging(sys.stdout)
 	    endpoint = resource.Endpoint(None)
 	    self.protocol = coap.Coap(endpoint)
-	    self.agent.start()
+	    self.agent.start(self.protocol)
 
 
 	def stop(self):

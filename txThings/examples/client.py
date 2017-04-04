@@ -24,8 +24,9 @@ syncEvent = threading.Event()
 
 class Agent():
 
-    def start(self):
-        print("Start reactor")
+    def start(self, protocol):
+        print("Start reactor and UDP")
+        reactor.listenUDP(0, protocol)
         threading.Thread(target=reactor.run, args=(False,)).start()
 
     def stop(self):
@@ -44,21 +45,19 @@ class Agent():
         self.origin = origin
         self.requestID = requestID
         syncEvent.clear()
-        reactor.callFromThread(reactor.listenUDP, 0, protocol)
+        # reactor.callFromThread(reactor.listenUDP, 0, protocol)
         if op == "post":
-            reactor.callFromThread(self.postResource)
+            self.postResource()
         elif op == "get":
-            reactor.callFromThread(self.getResource)
+            self.getResource()
         elif op == "put":
-            reactor.callFromThread(self.putResource)
+            self.putResource()
         elif op == "delete":
-            reactor.callFromThread(self.deleteResource)
+            self.deleteResource()
         else:
             print "Invalid operation"
             sys.exit(2)
-        # reactor.callFromThread(reactor.listenUDP, 0, protocol)
         syncEvent.wait()
-        # All the above calls result in a UDP response.
 
     def postResource(self):
 
@@ -157,5 +156,6 @@ class Agent():
         print failure
 
     def releaseBlocking(self, _ ):
+        print 'Sync Event'
         syncEvent.set()
 
