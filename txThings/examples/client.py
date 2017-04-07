@@ -45,7 +45,6 @@ class Agent():
         self.origin = origin
         self.requestID = requestID
         syncEvent.clear()
-        # reactor.callFromThread(reactor.listenUDP, 0, protocol)
         if op == "post":
             self.postResource()
         elif op == "get":
