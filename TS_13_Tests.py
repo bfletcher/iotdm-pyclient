@@ -17,7 +17,7 @@ class TS13(unittest.TestCase):
     def test_TS13_Sequence(self):
     # Instantiate the api and start the reactor
         self.api = iotdm_api.Iotdm_api()
-        self.api.start()
+        self.api.startCoap()
 	
     # test_0_CSE_Provisioning
         print("test_0_CSE_Provisioning")
@@ -246,7 +246,7 @@ class TS13(unittest.TestCase):
     #    (responseCode, responseString) = self.api.delete("coap://localhost:5683/ODL-oneM2M-Cse/TestNode", origin="CSE3219/C9886", requestID="12345")
 
     # Stop the reactor
-        self.api.stop()
+        self.api.stopCoap()
 
 
 

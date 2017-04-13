@@ -14,14 +14,14 @@ class Iotdm_api():
 	def __init__(self):
 	    self.agent = Agent() 
 
-	def start(self):
+	def startCoap(self):
 	    # Start any infrastructure needed for the API
 	    log.startLogging(sys.stdout)
 	    endpoint = resource.Endpoint(None)
 	    self.protocol = coap.Coap(endpoint)
 	    self.agent.start(self.protocol)
 
-	def stop(self):
+	def stopCoap(self):
 	    # Stop any infrastructure 
 	    self.agent.stop()
 

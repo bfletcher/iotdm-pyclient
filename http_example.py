@@ -14,7 +14,6 @@ from onem2m_xml_protocols.container import *
 from onem2m_xml_protocols.contentinstance import *
 
 api = iotdm_api.Iotdm_api()
-# api.start()
 
 # Build the root CSE base of a tree by Restconf:
 (responseCode, responseString) = api.restConf('http://localhost', 'InCSE1', 'admin', 'admin')
@@ -79,5 +78,4 @@ print("Result - Code: " + str(responseCode) + " String: " + responseString)
 (responseCode, responseString) = api.delete("http://localhost:8282/InCSE1/myAE/myContainer/myContentInstance", origin="AE-ID", requestID="12345")
 print("Result - Code: " + str(responseCode) + " String: " + responseString)
 
-# api.stop()
 
