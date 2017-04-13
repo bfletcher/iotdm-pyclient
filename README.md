@@ -26,7 +26,7 @@ The distribution directory ".idea" includes project files for the PyCharm IDE.
 ## Functionality and Limitations
 
 The distribution is a Python framework to support a oneM2M compatible IoT client with HTTP and CoAP protocol support. The API is limited in this version. Results of operations are not returned to the calling application (even success/failure indications).
- API results are recorded only as print statements.
+API results are returned as (responseCode, responseString) for both http and CoAP requests.
 
 When using the CoAP protocol functions they block until a response has been received. To achieve this, the twisted reactor runs in a separate thread.
 
@@ -34,7 +34,7 @@ Examples showing CoAP and HTTP may be seen at:
 https://wiki.opendaylight.org/view/IoTDM:PythonAPI
 but note this does not show all necessary Python imports therefore it may be better to refer to the example scripts below. 
 
-## HTTP Examples in the Distribution
+## HTTP Examples 
 
 HTTP and CoAP support can be included by importing iotdm_api.py - see example usage in http_example.py or TS_13_Tests.py.
 
@@ -46,7 +46,7 @@ Navigate to the root directory for the library. The HTTP examples may then be ru
 python http_example.py
 ```
 
-## CoAP Examples in the Distribution
+## CoAP Examples 
 
 CoAP examples may be seen by invoking tests from the module ```TS_13_Tests.py```.
 
@@ -62,6 +62,5 @@ This project includes commits cherry-picked from https://github.com/sharpie7/iot
 
 ## Todo
 
-Return results to a calling client rather than just printing them to the console.
-The project uses a fork of txthings for unknown reasons. It would be sensible to move to use the upstream version.
-The combination of twisted and threads used here is not fully thread-safe (yet). Consider before using as part of your starship's life-support systems.
+ - The project uses a fork of txthings for historic reasons. It would be sensible to move to use the upstream version.
+ - The combination of twisted and threads used here is not fully thread-safe (yet). Consider before using as part of your starship's life-support systems.
