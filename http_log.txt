@@ -1,0 +1,17 @@
+billf@billfdevhp:~/iotdm/iotdm-pyclient$ python http_example.py 
+Result - Code: 200 String: {"output":{"onem2m-primitive":[{"name":"rsc","value":"Provisioned cseBase: InCSE1 type: IN-CSE"},{"name":"pc","value":"Provisioned default ACP for InCSE1, name: _deaultACP"}]}}
+Result - Code: 201 String: {"m2m:ae":{"ct":"20170413T143225","aei":"myAE","ty":2,"ri":"d","lt":"20170413T143225","pi":"/InCSE1/b","et":"29991231T111111"}}
+
+Result - Code: 201 String: {"m2m:cnt":{"ct":"20170413T143225","st":0,"ty":3,"cbs":0,"ri":"e","lt":"20170413T143225","pi":"/InCSE1/d","et":"29991231T111111","cni":0}}
+
+Result - Code: 201 String: {"m2m:cnt":{"ct":"20170413T143225","st":0,"ty":3,"cbs":0,"ri":"f","lt":"20170413T143225","pi":"/InCSE1/e","et":"29991231T111111","cni":0}}
+
+Result - Code: 201 String: {"m2m:cin":{"cs":5,"ct":"20170413T143225","st":1,"ty":4,"ri":"g","lt":"20170413T143225","pi":"/InCSE1/e","et":"29991231T111111"}}
+
+Result - Code: 201 String: {"m2m:cin":{"cs":5,"ct":"20170413T143225","st":1,"ty":4,"ri":"h","lt":"20170413T143225","pi":"/InCSE1/f","et":"29991231T111111"}}
+
+Result - Code: 200 String: {"m2m:cnt":{"st":2,"or":"http://info","lt":"20170413T143225"}}
+
+Result - Code: 200 String: {"m2m:cnt":{"st":2,"lbl":["submarine"],"lt":"20170413T143225"}}
+
+Result - Code: 200 String: {"m2m:cin":{"cs":5,"ct":"20170413T143225","st":1,"con":"hello","ty":4,"ri":"g","lt":"20170413T143225","pi":"/InCSE1/e","rn":"myContentInstance","et":"29991231T111111"}}

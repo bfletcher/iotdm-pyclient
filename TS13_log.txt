@@ -1,458 +1,432 @@
-billf@billfdevhp:~/iotdm/iotdm-pyclient$ vi TS_13_Tests.py 
-billf@billfdevhp:~/iotdm/iotdm-pyclient$ python TS_13_Tests.py
-2017-04-06 17:31:37+0100 [-] Log opened.
-2017-04-06 17:31:37+0100 [-] Start reactor and UDP
-2017-04-06 17:31:37+0100 [-] Coap starting on 53481
-2017-04-06 17:31:37+0100 [-] Starting protocol <txThings.txthings.coap.Coap instance at 0x7f9429617248>
-2017-04-06 17:31:37+0100 [-] test_0_CSE_Provisioning
-2017-04-06 17:31:38+0100 [-] 200
-2017-04-06 17:31:38+0100 [-] {"output":{"onem2m-primitive":[{"name":"rsc","value":"Provisioned cseBase: ODL-oneM2M-Cse type: IN-CSE"},{"name":"pc","value":"Provisioned default ACP for ODL-oneM2M-Cse, name: _deaultACP"}]}}
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_01_Retrieve_CSEBase
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35860.
-2017-04-06 17:31:38+0100 [-] Message 'D\x01\x8c\x14\x00\x00\xbaA`]\x01ODL-oneM2M-Cse@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba41, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c\x14\x00\x00\xbaA\xc0\xff{"m2m:cb":{"ct":"20170406T163138","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170406T163138","rn":"ODL-oneM2M-Cse"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35860
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35860.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba41, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:cb":{"ct":"20170406T163138","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170406T163138","rn":"ODL-oneM2M-Cse"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_06_Create_AE
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35861.
-2017-04-06 17:31:38+0100 [-] Message 'D\x02\x8c\x15\x00\x00\xbaB9127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1124ty=2\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x02\xff{\n    "m2m:ae": {\n        "api": "Nk836-t071-fc022", \n        "r' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba42, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'd_\x8c\x15\x00\x00\xbaB\xd1\x0e\n' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35861
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35861.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba42, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending next block of blockwise request.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange added, Message ID: 35862.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Message 'D\x02\x8c\x16\x00\x00\xbaC9127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1124ty=2\xc1\x12\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x02\xffn": "TestAE", \n        "rr": true\n    }\n}' sent successfully
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending request - Token: 0000ba43, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dA\x8c\x16\x00\x00\xbaC\xc0\xd1\x02\x12\xff{"m2m:ae":{"ct":"20170406T163138","aei":"TestAE","ty":2,"ri":"4","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35862
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35862.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba43, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 0, size_exp = 2.
-2017-04-06 17:31:38+0100 [-] Response Code: 2.01 Created
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:ae":{"ct":"20170406T163138","aei":"TestAE","ty":2,"ri":"4","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_07_Retrieve_AE
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35863.
-2017-04-06 17:31:38+0100 [-] Message 'D\x01\x8c\x17\x00\x00\xbaD`]\x08ODL-oneM2M-Cse/TestAE@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba44, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c\x17\x00\x00\xbaD\xc0\xff{"m2m:ae":{"rr":true,"ct":"20170406T163138","aei":"TestAE","ty":2,"ri":"4","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","api":"Nk836-t071-fc022","rn":"TestAE","et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35863
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35863.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba44, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:ae":{"rr":true,"ct":"20170406T163138","aei":"TestAE","ty":2,"ri":"4","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","api":"Nk836-t071-fc022","rn":"TestAE","et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_08_Update_AE - skipped
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_09_Delete_AE - skipped
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_10_Create_Container
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35864.
-2017-04-06 17:31:38+0100 [-] Message 'D\x02\x8c\x18\x00\x00\xbaE9127.0.0.1B\x163M\x08ODL-oneM2M-Cse/TestAE\x1124ty=3\xdd\xe4\x00CSE3219/C9886\x1512345\xa1\x03\xff{\n    "m2m:cnt": {\n        "rn": "TestContainer"\n    }\n}' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba45, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dA\x8c\x18\x00\x00\xbaE\xc0\xff{"m2m:cnt":{"ct":"20170406T163138","st":0,"ty":3,"cbs":0,"ri":"5","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/4","et":"29991231T111111","cni":0}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35864
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35864.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba45, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.01 Created
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:cnt":{"ct":"20170406T163138","st":0,"ty":3,"cbs":0,"ri":"5","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/4","et":"29991231T111111","cni":0}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_11_Retrieve_Container
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35865.
-2017-04-06 17:31:38+0100 [-] Message 'D\x01\x8c\x19\x00\x00\xbaF`]\x16ODL-oneM2M-Cse/TestAE/TestContainer@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba46, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c\x19\x00\x00\xbaF\xc0\xff{"m2m:cnt":{"ct":"20170406T163138","st":0,"ty":3,"cbs":0,"ri":"5","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/4","rn":"TestContainer","et":"29991231T111111","cni":0}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35865
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35865.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba46, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:cnt":{"ct":"20170406T163138","st":0,"ty":3,"cbs":0,"ri":"5","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/4","rn":"TestContainer","et":"29991231T111111","cni":0}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_12_Update_Container
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35866.
-2017-04-06 17:31:38+0100 [-] Message 'D\x03\x8c\x1a\x00\x00\xbaG9127.0.0.1B\x163M\x16ODL-oneM2M-Cse/TestAE/TestContainer\x112\xdd\xe7\x00CSE3219/C9886\x1512345\xff{\n    "m2m:cnt": {}\n}' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba47, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dD\x8c\x1a\x00\x00\xbaG\xc0\xff{"m2m:cnt":{"st":1,"lt":"20170406T163138"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35866
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35866.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba47, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.04 Changed
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:cnt":{"st":1,"lt":"20170406T163138"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_13_Delete_Container - skipped
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_14_Create_ContentInstance
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35867.
-2017-04-06 17:31:38+0100 [-] Message 'D\x02\x8c\x1b\x00\x00\xbaH9127.0.0.1B\x163M\x16ODL-oneM2M-Cse/TestAE/TestContainer\x1124ty=4\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x04\xff{\n    "m2m:cin": {\n        "con": "some data", \n        "rn": "T' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba48, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'd_\x8c\x1b\x00\x00\xbaH\xd1\x0e\n' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35867
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35867.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba48, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending next block of blockwise request.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange added, Message ID: 35868.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Message 'D\x02\x8c\x1c\x00\x00\xbaI9127.0.0.1B\x163M\x16ODL-oneM2M-Cse/TestAE/TestContainer\x1124ty=4\xc1\x12\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x04\xffestContentInstance"\n    }\n}' sent successfully
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending request - Token: 0000ba49, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dA\x8c\x1c\x00\x00\xbaI\xc0\xd1\x02\x12\xff{"m2m:cin":{"cs":9,"ct":"20170406T163138","st":2,"ty":4,"ri":"6","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/5","et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35868
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35868.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba49, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 0, size_exp = 2.
-2017-04-06 17:31:38+0100 [-] Response Code: 2.01 Created
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:cin":{"cs":9,"ct":"20170406T163138","st":2,"ty":4,"ri":"6","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/5","et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_15_Retrieve_ContentInstance
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35869.
-2017-04-06 17:31:38+0100 [-] Message 'D\x01\x8c\x1d\x00\x00\xbaJ`]*ODL-oneM2M-Cse/TestAE/TestContainer/TestContentInstance@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba4a, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c\x1d\x00\x00\xbaJ\xc0\xff{"m2m:cin":{"cs":9,"ct":"20170406T163138","st":2,"con":"some data","ty":4,"ri":"6","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/5","rn":"TestContentInstance","et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35869
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35869.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba4a, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:cin":{"cs":9,"ct":"20170406T163138","st":2,"con":"some data","ty":4,"ri":"6","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/5","rn":"TestContentInstance","et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_17_Delete_ContentInstance - skipped
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_18_Discovery_of_all_resources
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35870.
-2017-04-06 17:31:38+0100 [-] Message 'D\x01\x8c\x1e\x00\x00\xbaK`]\x01ODL-oneM2M-CseDfu=1\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba4b, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c\x1e\x00\x00\xbaK\xc0\xff[{"m2m:cb":{"ct":"20170406T163138","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170406T163138","rn":"ODL-oneM2M-Cse"}},{"m2m:acp":{"ct":"20170406T163138","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"3","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"_defaultACP","et":"29991231T111111"}},{"m2m:ae":{"rr":true,"ct":"20170406T163138","aei":"TestAE","ty":2,"ri":"4","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","api":"Nk836-t071-fc022","rn":"TestAE","et":"29991231T111111"}},{"m2m:cnt":{"ct":"20170406T163138","st":2,"ty":3,"cbs":9,"ri":"5","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/4","rn":"TestContainer","et":"29991231T111111","cni":1}},{"m2m:cin":{"cs":9,"ct":"20170406T163138","st":2,"con":"some data","ty":4,"ri":"6","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/5","rn":"TestContentInstance","et":"29991231T111111"}}]' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35870
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35870.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba4b, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: [{"m2m:cb":{"ct":"20170406T163138","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170406T163138","rn":"ODL-oneM2M-Cse"}},{"m2m:acp":{"ct":"20170406T163138","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"3","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"_defaultACP","et":"29991231T111111"}},{"m2m:ae":{"rr":true,"ct":"20170406T163138","aei":"TestAE","ty":2,"ri":"4","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","api":"Nk836-t071-fc022","rn":"TestAE","et":"29991231T111111"}},{"m2m:cnt":{"ct":"20170406T163138","st":2,"ty":3,"cbs":9,"ri":"5","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/4","rn":"TestContainer","et":"29991231T111111","cni":1}},{"m2m:cin":{"cs":9,"ct":"20170406T163138","st":2,"con":"some data","ty":4,"ri":"6","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/5","rn":"TestContentInstance","et":"29991231T111111"}}]
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_19_Discovery_with_label_filter_criteria
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35871.
-2017-04-06 17:31:38+0100 [-] Message 'D\x01\x8c\x1f\x00\x00\xbaL`]\x01ODL-oneM2M-CseM\x00fu=1&lbl=key1\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba4c, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c\x1f\x00\x00\xbaL\xc0\xff[]' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35871
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35871.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba4c, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: []
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_20_Discovery_with_limit_filter_criteria
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35872.
-2017-04-06 17:31:38+0100 [-] Message 'D\x01\x8c \x00\x00\xbaM`]\x01ODL-oneM2M-CseJfu=1&lim=2\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba4d, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c \x00\x00\xbaM\xc0\xff[{"m2m:cb":{"ct":"20170406T163138","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170406T163138","rn":"ODL-oneM2M-Cse"}},{"m2m:acp":{"ct":"20170406T163138","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"3","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"_defaultACP","et":"29991231T111111"}}]' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35872
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35872.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba4d, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: [{"m2m:cb":{"ct":"20170406T163138","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170406T163138","rn":"ODL-oneM2M-Cse"}},{"m2m:acp":{"ct":"20170406T163138","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"3","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"_defaultACP","et":"29991231T111111"}}]
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_21_Discovery_with_multiple_filter_criteria
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35873.
-2017-04-06 17:31:38+0100 [-] Message 'D\x01\x8c!\x00\x00\xbaN`]\x01ODL-oneM2M-CseM\tfu=1&lbl=key1&lbl=key2\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba4e, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c!\x00\x00\xbaN\xc0\xff[]' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35873
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35873.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba4e, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: []
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_22_Create_Subscription
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35874.
-2017-04-06 17:31:38+0100 [-] Message 'D\x02\x8c"\x00\x00\xbaO9127.0.0.1B\x163M\x16ODL-oneM2M-Cse/TestAE/TestContainer\x1125ty=23\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x17\xff{\n    "m2m:sub": {\n        "nu": [\n            "http://localhost' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba4f, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'd_\x8c"\x00\x00\xbaO\xd1\x0e\n' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35874
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35874.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba4f, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending next block of blockwise request.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange added, Message ID: 35875.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Message 'D\x02\x8c#\x00\x00\xbaP9127.0.0.1B\x163M\x16ODL-oneM2M-Cse/TestAE/TestContainer\x1125ty=23\xc1\x12\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x17\xff"\n        ], \n        "rn": "TestSubscription"\n    }\n}' sent successfully
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending request - Token: 0000ba50, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dA\x8c#\x00\x00\xbaP\xc0\xd1\x02\x12\xff{"m2m:sub":{"ct":"20170406T163138","ty":23,"ri":"7","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/5","et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35875
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35875.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba50, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 0, size_exp = 2.
-2017-04-06 17:31:38+0100 [-] Response Code: 2.01 Created
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:sub":{"ct":"20170406T163138","ty":23,"ri":"7","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/5","et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_23_Retrieve_Subscription
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35876.
-2017-04-06 17:31:38+0100 [-] Message "D\x01\x8c$\x00\x00\xbaQ`]'ODL-oneM2M-Cse/TestAE/TestContainer/TestSubscription@\xdd\xe4\x00CSE3219/C9886\x1512345" sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba51, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c$\x00\x00\xbaQ\xc0\xff{"m2m:sub":{"ct":"20170406T163138","ty":23,"nu":["http://localhost"],"ri":"7","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/5","rn":"TestSubscription","et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35876
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35876.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba51, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:sub":{"ct":"20170406T163138","ty":23,"nu":["http://localhost"],"ri":"7","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/5","rn":"TestSubscription","et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_24_Update_Subscription
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35877.
-2017-04-06 17:31:38+0100 [-] Message 'D\x03\x8c%\x00\x00\xbaR9127.0.0.1B\x163M\'ODL-oneM2M-Cse/TestAE/TestContainer/TestSubscription\x112\xdd\xe7\x00CSE3219/C9886\x1512345\xff{\n    "m2m:sub": {}\n}' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba52, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dD\x8c%\x00\x00\xbaR\xc0\xff{"m2m:sub":{"lt":"20170406T163138"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35877
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35877.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba52, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.04 Changed
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:sub":{"lt":"20170406T163138"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_25_Delete_Subscription - skipped
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_26_Create_AccessControlPolicy
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35878.
-2017-04-06 17:31:38+0100 [-] Message 'D\x02\x8c&\x00\x00\xbaS9127.0.0.1B\x163M\x08ODL-oneM2M-Cse/TestAE\x1124ty=1\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x01\xff{\n"m2m:acp":{\n"pv":{\n"acr":[\n{\n"acop":63,\n"acor":[\n"*"\n]\n}\n]\n},\n' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba53, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'd_\x8c&\x00\x00\xbaS\xd1\x0e\n' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35878
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35878.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba53, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending next block of blockwise request.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange added, Message ID: 35879.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Message 'D\x02\x8c\'\x00\x00\xbaT9127.0.0.1B\x163M\x08ODL-oneM2M-Cse/TestAE\x1124ty=1\xc1\x1a\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x01\xff"pvs":{\n"acr":[\n{\n"acop":63,\n"acor":[\n"admin"\n]\n}\n]\n},\n"rn":"Tes' sent successfully
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending request - Token: 0000ba54, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received "d_\x8c'\x00\x00\xbaT\xd1\x0e\x1a" from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35879
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35879.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba54, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 1, size_exp = 2.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending next block of blockwise request.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange added, Message ID: 35880.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Message 'D\x02\x8c(\x00\x00\xbaU9127.0.0.1B\x163M\x08ODL-oneM2M-Cse/TestAE\x1124ty=1\xc1"\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x01\xfftACP"\n}\n}' sent successfully
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending request - Token: 0000ba55, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dA\x8c(\x00\x00\xbaU\xc0\xd1\x02"\xff{"m2m:acp":{"ct":"20170406T163138","ty":1,"ri":"8","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/4","et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35880
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35880.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba55, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 2, more = 0, size_exp = 2.
-2017-04-06 17:31:38+0100 [-] Response Code: 2.01 Created
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:acp":{"ct":"20170406T163138","ty":1,"ri":"8","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/4","et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_27_Retrieve_AccessControlPolicy
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35881.
-2017-04-06 17:31:38+0100 [-] Message 'D\x01\x8c)\x00\x00\xbaV`]\x10ODL-oneM2M-Cse/TestAE/TestACP@\xd5\xe4admin\x1512345' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba56, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c)\x00\x00\xbaV\xc0\xff{"m2m:acp":{"ct":"20170406T163138","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"8","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/4","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"TestACP","et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35881
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35881.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba56, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:acp":{"ct":"20170406T163138","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"8","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/4","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"TestACP","et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_28_Update_AccessControlPolicy
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35882.
-2017-04-06 17:31:38+0100 [-] Message 'D\x03\x8c*\x00\x00\xbaW9127.0.0.1B\x163M\x10ODL-oneM2M-Cse/TestAE/TestACP\x112\xd1\x02\n\xd5\xd8admin\x1512345\xff{\n"m2m:acp":{\n"pv":{\n"acr":[\n{\n"acop":63,\n"acor":[\n"admin"\n]\n}\n]' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba57, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'd_\x8c*\x00\x00\xbaW\xd1\x0e\n' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35882
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35882.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba57, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending next block of blockwise request.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange added, Message ID: 35883.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Message 'D\x03\x8c+\x00\x00\xbaX9127.0.0.1B\x163M\x10ODL-oneM2M-Cse/TestAE/TestACP\x112\xd1\x02\x1a\xd5\xd8admin\x1512345\xff\n},\n"pvs":{\n"acr":[\n{\n"acop":63,\n"acor":[\n"admin"\n]\n}\n]\n},\n"rn":' sent successfully
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending request - Token: 0000ba58, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'd_\x8c+\x00\x00\xbaX\xd1\x0e\x1a' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35883
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35883.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba58, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 1, size_exp = 2.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending next block of blockwise request.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange added, Message ID: 35884.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Message 'D\x03\x8c,\x00\x00\xbaY9127.0.0.1B\x163M\x10ODL-oneM2M-Cse/TestAE/TestACP\x112\xd1\x02"\xd5\xd8admin\x1512345\xff"TestACP"\n}\n}' sent successfully
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending request - Token: 0000ba59, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'd\x80\x8c,\x00\x00\xbaY\xc0\xd1\x02"\xff{"error":"Resource Name cannot be updated: ODL-oneM2M-Cse/TestAE/TestACP/TestACP"}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35884
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35884.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba59, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 2, more = 0, size_exp = 2.
-2017-04-06 17:31:38+0100 [-] Response Code: 4.00 Bad Request
-2017-04-06 17:31:38+0100 [-] Payload: {"error":"Resource Name cannot be updated: ODL-oneM2M-Cse/TestAE/TestACP/TestACP"}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_29_Delete_AccessControlPolicy - skipped
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_30_Unauthorized_operation - skipped
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_31_Create_Group
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35885.
-2017-04-06 17:31:38+0100 [-] Message 'D\x02\x8c-\x00\x00\xbaZ9127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1124ty=9\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\t\xff{\n    "m2m:grp": {\n        "mid": [\n            "a"\n        ], \n' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba5a, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'd_\x8c-\x00\x00\xbaZ\xd1\x0e\n' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35885
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35885.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba5a, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending next block of blockwise request.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange added, Message ID: 35886.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Message 'D\x02\x8c.\x00\x00\xba[9127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1124ty=9\xc1\x1a\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\t\xff        "mnm": 10, \n        "mt": 2, \n        "rn": "TestGroup"\n' sent successfully
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending request - Token: 0000ba5b, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'd_\x8c.\x00\x00\xba[\xd1\x0e\x1a' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35886
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35886.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba5b, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 1, size_exp = 2.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending next block of blockwise request.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange added, Message ID: 35887.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Message 'D\x02\x8c/\x00\x00\xba\\9127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1124ty=9\xc1"\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\t\xff    }\n}' sent successfully
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending request - Token: 0000ba5c, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dA\x8c/\x00\x00\xba\\\xc0\xd1\x02"\xff{"m2m:grp":{"ct":"20170406T163138","cnm":1,"ty":9,"ri":"9","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35887
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35887.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba5c, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 2, more = 0, size_exp = 2.
-2017-04-06 17:31:38+0100 [-] Response Code: 2.01 Created
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:grp":{"ct":"20170406T163138","cnm":1,"ty":9,"ri":"9","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_32_Retrieve_Group
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35888.
-2017-04-06 17:31:38+0100 [-] Message 'D\x01\x8c0\x00\x00\xba]`]\x0bODL-oneM2M-Cse/TestGroup@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba5d, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c0\x00\x00\xba]\xc0\xff{"m2m:grp":{"ct":"20170406T163138","cnm":1,"ty":9,"mt":2,"ri":"9","lt":"20170406T163138","mid":["a"],"pi":"/ODL-oneM2M-Cse/2","rn":"TestGroup","mnm":10,"et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35888
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35888.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba5d, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:grp":{"ct":"20170406T163138","cnm":1,"ty":9,"mt":2,"ri":"9","lt":"20170406T163138","mid":["a"],"pi":"/ODL-oneM2M-Cse/2","rn":"TestGroup","mnm":10,"et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_33_Update_Group
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35889.
-2017-04-06 17:31:38+0100 [-] Message 'D\x03\x8c1\x00\x00\xba^9127.0.0.1B\x163M\x0bODL-oneM2M-Cse/TestGroup\x112\xdd\xe7\x00CSE3219/C9886\x1512345\xff{\n    "m2m:grp": {}\n}' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba5e, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'd\xa0\x8c1\x00\x00\xba^\xc0\xff{"error":"RPC exception:java.lang.NullPointerException"}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35889
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35889.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba5e, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 5.00 Internal Server Error
-2017-04-06 17:31:38+0100 [-] Payload: {"error":"RPC exception:java.lang.NullPointerException"}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_34_Delete_Group - skipped
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_35_Create_Node
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35890.
-2017-04-06 17:31:38+0100 [-] Message 'D\x02\x8c2\x00\x00\xba_9127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1125ty=14\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x0e\xff{\n    "m2m:nod": {\n        "ni": "a", \n        "rn": "TestNode"\n' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba5f, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'd_\x8c2\x00\x00\xba_\xd1\x0e\n' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35890
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35890.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba5f, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending next block of blockwise request.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange added, Message ID: 35891.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Message 'D\x02\x8c3\x00\x00\xba`9127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1125ty=14\xc1\x12\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x0e\xff    }\n}' sent successfully
-2017-04-06 17:31:38+0100 [Coap (UDP)] Sending request - Token: 0000ba60, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dA\x8c3\x00\x00\xba`\xc0\xd1\x02\x12\xff{"m2m:nod":{"ct":"20170406T163138","ty":14,"ri":"a","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35891
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35891.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba60, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 0, size_exp = 2.
-2017-04-06 17:31:38+0100 [-] Response Code: 2.01 Created
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:nod":{"ct":"20170406T163138","ty":14,"ri":"a","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_36_Retrieve_Node
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35892.
-2017-04-06 17:31:38+0100 [-] Message 'D\x01\x8c4\x00\x00\xbaa`]\nODL-oneM2M-Cse/TestNode@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba61, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dE\x8c4\x00\x00\xbaa\xc0\xff{"m2m:nod":{"ct":"20170406T163138","ty":14,"ri":"a","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","ni":"a","rn":"TestNode","et":"29991231T111111"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35892
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35892.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba61, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.05 Content
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:nod":{"ct":"20170406T163138","ty":14,"ri":"a","lt":"20170406T163138","pi":"/ODL-oneM2M-Cse/2","ni":"a","rn":"TestNode","et":"29991231T111111"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_37_Update_Node
-2017-04-06 17:31:38+0100 [-] Sending message to 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [-] Exchange added, Message ID: 35893.
-2017-04-06 17:31:38+0100 [-] Message 'D\x03\x8c5\x00\x00\xbab9127.0.0.1B\x163M\nODL-oneM2M-Cse/TestNode\x112\xdd\xe7\x00CSE3219/C9886\x1512345\xff{\n    "m2m:nod": {}\n}' sent successfully
-2017-04-06 17:31:38+0100 [-] Sending request - Token: 0000ba62, Host: 127.0.0.1, Port: 5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received 'dD\x8c5\x00\x00\xbab\xc0\xff{"m2m:nod":{"lt":"20170406T163138"}}' from 127.0.0.1:5683
-2017-04-06 17:31:38+0100 [Coap (UDP)] Incoming Message ID: 35893
-2017-04-06 17:31:38+0100 [Coap (UDP)] New unique ACK or RST message received
-2017-04-06 17:31:38+0100 [Coap (UDP)] Exchange removed, Message ID: 35893.
-2017-04-06 17:31:38+0100 [Coap (UDP)] Received Response, token: 0000ba62, host: 127.0.0.1, port: 5683
-2017-04-06 17:31:38+0100 [-] Response Code: 2.04 Changed
-2017-04-06 17:31:38+0100 [-] Payload: {"m2m:nod":{"lt":"20170406T163138"}}
-2017-04-06 17:31:38+0100 [-] Sync Event
-2017-04-06 17:31:38+0100 [-] test_TD_M2M_NH_38_Delete_Node - skipped
-2017-04-06 17:31:38+0100 [-] Stop reactor
+billf@billfdevhp:~/iotdm/iotdm-pyclient$ python TS_13_Tests.py 
+2017-04-13 15:30:15+0100 [-] Log opened.
+2017-04-13 15:30:15+0100 [-] Start reactor and UDP
+2017-04-13 15:30:15+0100 [-] Coap starting on 42937
+2017-04-13 15:30:15+0100 [-] Starting protocol <txThings.txthings.coap.Coap instance at 0x7efea489a200>
+2017-04-13 15:30:15+0100 [-] test_0_CSE_Provisioning
+2017-04-13 15:30:15+0100 [-] Result - Code: 200 String: {"output":{"onem2m-primitive":[{"name":"rsc","value":"Provisioned cseBase: ODL-oneM2M-Cse type: IN-CSE"},{"name":"pc","value":"Provisioned default ACP for ODL-oneM2M-Cse, name: _deaultACP"}]}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_01_Retrieve_CSEBase
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34220.
+2017-04-13 15:30:15+0100 [-] Message 'D\x01\x85\xac\x00\x00o\xba`]\x01ODL-oneM2M-Cse@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fba, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xac\x00\x00o\xba\xc0\xff{"m2m:cb":{"ct":"20170413T143015","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170413T143015","rn":"ODL-oneM2M-Cse"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34220
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34220.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fba, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: {"m2m:cb":{"ct":"20170413T143015","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170413T143015","rn":"ODL-oneM2M-Cse"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_06_Create_AE
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34221.
+2017-04-13 15:30:15+0100 [-] Message 'D\x02\x85\xad\x00\x00o\xbb9127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1124ty=2\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x02\xff{\n    "m2m:ae": {\n        "api": "Nk836-t071-fc022", \n        "r' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fbb, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd_\x85\xad\x00\x00o\xbb\xd1\x0e\n' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34221
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34221.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fbb, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending next block of blockwise request.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange added, Message ID: 34222.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Message 'D\x02\x85\xae\x00\x00o\xbc9127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1124ty=2\xc1\x12\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x02\xffn": "TestAE", \n        "rr": true\n    }\n}' sent successfully
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending request - Token: 00006fbc, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dA\x85\xae\x00\x00o\xbc\xc0\xd1\x02\x12\xff{"m2m:ae":{"ct":"20170413T143015","aei":"TestAE","ty":2,"ri":"4","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34222
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34222.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fbc, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 0, size_exp = 2.
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.01 Created String: {"m2m:ae":{"ct":"20170413T143015","aei":"TestAE","ty":2,"ri":"4","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_07_Retrieve_AE
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34223.
+2017-04-13 15:30:15+0100 [-] Message 'D\x01\x85\xaf\x00\x00o\xbd`]\x08ODL-oneM2M-Cse/TestAE@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fbd, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xaf\x00\x00o\xbd\xc0\xff{"m2m:ae":{"rr":true,"ct":"20170413T143015","aei":"TestAE","ty":2,"ri":"4","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","api":"Nk836-t071-fc022","rn":"TestAE","et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34223
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34223.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fbd, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: {"m2m:ae":{"rr":true,"ct":"20170413T143015","aei":"TestAE","ty":2,"ri":"4","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","api":"Nk836-t071-fc022","rn":"TestAE","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_08_Update_AE - skipped
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_09_Delete_AE - skipped
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_10_Create_Container
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34224.
+2017-04-13 15:30:15+0100 [-] Message 'D\x02\x85\xb0\x00\x00o\xbe9127.0.0.1B\x163M\x08ODL-oneM2M-Cse/TestAE\x1124ty=3\xdd\xe4\x00CSE3219/C9886\x1512345\xa1\x03\xff{\n    "m2m:cnt": {\n        "rn": "TestContainer"\n    }\n}' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fbe, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dA\x85\xb0\x00\x00o\xbe\xc0\xff{"m2m:cnt":{"ct":"20170413T143015","st":0,"ty":3,"cbs":0,"ri":"5","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/4","et":"29991231T111111","cni":0}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34224
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34224.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fbe, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.01 Created String: {"m2m:cnt":{"ct":"20170413T143015","st":0,"ty":3,"cbs":0,"ri":"5","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/4","et":"29991231T111111","cni":0}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_11_Retrieve_Container
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34225.
+2017-04-13 15:30:15+0100 [-] Message 'D\x01\x85\xb1\x00\x00o\xbf`]\x16ODL-oneM2M-Cse/TestAE/TestContainer@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fbf, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xb1\x00\x00o\xbf\xc0\xff{"m2m:cnt":{"ct":"20170413T143015","st":0,"ty":3,"cbs":0,"ri":"5","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/4","rn":"TestContainer","et":"29991231T111111","cni":0}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34225
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34225.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fbf, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: {"m2m:cnt":{"ct":"20170413T143015","st":0,"ty":3,"cbs":0,"ri":"5","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/4","rn":"TestContainer","et":"29991231T111111","cni":0}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_12_Update_Container
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34226.
+2017-04-13 15:30:15+0100 [-] Message 'D\x03\x85\xb2\x00\x00o\xc09127.0.0.1B\x163M\x16ODL-oneM2M-Cse/TestAE/TestContainer\x112\xdd\xe7\x00CSE3219/C9886\x1512345\xff{\n    "m2m:cnt": {}\n}' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fc0, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dD\x85\xb2\x00\x00o\xc0\xc0\xff{"m2m:cnt":{"st":1,"lt":"20170413T143015"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34226
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34226.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fc0, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.04 Changed String: {"m2m:cnt":{"st":1,"lt":"20170413T143015"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_13_Delete_Container - skipped
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_14_Create_ContentInstance
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34227.
+2017-04-13 15:30:15+0100 [-] Message 'D\x02\x85\xb3\x00\x00o\xc19127.0.0.1B\x163M\x16ODL-oneM2M-Cse/TestAE/TestContainer\x1124ty=4\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x04\xff{\n    "m2m:cin": {\n        "con": "some data", \n        "rn": "T' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fc1, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd_\x85\xb3\x00\x00o\xc1\xd1\x0e\n' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34227
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34227.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fc1, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending next block of blockwise request.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange added, Message ID: 34228.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Message 'D\x02\x85\xb4\x00\x00o\xc29127.0.0.1B\x163M\x16ODL-oneM2M-Cse/TestAE/TestContainer\x1124ty=4\xc1\x12\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x04\xffestContentInstance"\n    }\n}' sent successfully
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending request - Token: 00006fc2, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dA\x85\xb4\x00\x00o\xc2\xc0\xd1\x02\x12\xff{"m2m:cin":{"cs":9,"ct":"20170413T143015","st":2,"ty":4,"ri":"6","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34228
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34228.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fc2, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 0, size_exp = 2.
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.01 Created String: {"m2m:cin":{"cs":9,"ct":"20170413T143015","st":2,"ty":4,"ri":"6","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_15_Retrieve_ContentInstance
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34229.
+2017-04-13 15:30:15+0100 [-] Message 'D\x01\x85\xb5\x00\x00o\xc3`]*ODL-oneM2M-Cse/TestAE/TestContainer/TestContentInstance@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fc3, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xb5\x00\x00o\xc3\xc0\xff{"m2m:cin":{"cs":9,"ct":"20170413T143015","st":2,"con":"some data","ty":4,"ri":"6","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","rn":"TestContentInstance","et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34229
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34229.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fc3, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: {"m2m:cin":{"cs":9,"ct":"20170413T143015","st":2,"con":"some data","ty":4,"ri":"6","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","rn":"TestContentInstance","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_17_Delete_ContentInstance - skipped
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: {"m2m:cin":{"cs":9,"ct":"20170413T143015","st":2,"con":"some data","ty":4,"ri":"6","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","rn":"TestContentInstance","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_18_Discovery_of_all_resources
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34230.
+2017-04-13 15:30:15+0100 [-] Message 'D\x01\x85\xb6\x00\x00o\xc4`]\x01ODL-oneM2M-CseDfu=1\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fc4, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xb6\x00\x00o\xc4\xc0\xff[{"m2m:cb":{"ct":"20170413T143015","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170413T143015","rn":"ODL-oneM2M-Cse"}},{"m2m:acp":{"ct":"20170413T143015","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"3","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"_defaultACP","et":"29991231T111111"}},{"m2m:ae":{"rr":true,"ct":"20170413T143015","aei":"TestAE","ty":2,"ri":"4","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","api":"Nk836-t071-fc022","rn":"TestAE","et":"29991231T111111"}},{"m2m:cnt":{"ct":"20170413T143015","st":2,"ty":3,"cbs":9,"ri":"5","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/4","rn":"TestContainer","et":"29991231T111111","cni":1}},{"m2m:cin":{"cs":9,"ct":"20170413T143015","st":2,"con":"some data","ty":4,"ri":"6","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","rn":"TestContentInstance","et":"29991231T111111"}}]' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34230
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34230.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fc4, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: [{"m2m:cb":{"ct":"20170413T143015","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170413T143015","rn":"ODL-oneM2M-Cse"}},{"m2m:acp":{"ct":"20170413T143015","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"3","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"_defaultACP","et":"29991231T111111"}},{"m2m:ae":{"rr":true,"ct":"20170413T143015","aei":"TestAE","ty":2,"ri":"4","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","api":"Nk836-t071-fc022","rn":"TestAE","et":"29991231T111111"}},{"m2m:cnt":{"ct":"20170413T143015","st":2,"ty":3,"cbs":9,"ri":"5","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/4","rn":"TestContainer","et":"29991231T111111","cni":1}},{"m2m:cin":{"cs":9,"ct":"20170413T143015","st":2,"con":"some data","ty":4,"ri":"6","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","rn":"TestContentInstance","et":"29991231T111111"}}]
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_19_Discovery_with_label_filter_criteria
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34231.
+2017-04-13 15:30:15+0100 [-] Message 'D\x01\x85\xb7\x00\x00o\xc5`]\x01ODL-oneM2M-CseM\x00fu=1&lbl=key1\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fc5, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xb7\x00\x00o\xc5\xc0\xff[]' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34231
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34231.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fc5, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: [{"m2m:cb":{"ct":"20170413T143015","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170413T143015","rn":"ODL-oneM2M-Cse"}},{"m2m:acp":{"ct":"20170413T143015","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"3","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"_defaultACP","et":"29991231T111111"}},{"m2m:ae":{"rr":true,"ct":"20170413T143015","aei":"TestAE","ty":2,"ri":"4","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","api":"Nk836-t071-fc022","rn":"TestAE","et":"29991231T111111"}},{"m2m:cnt":{"ct":"20170413T143015","st":2,"ty":3,"cbs":9,"ri":"5","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/4","rn":"TestContainer","et":"29991231T111111","cni":1}},{"m2m:cin":{"cs":9,"ct":"20170413T143015","st":2,"con":"some data","ty":4,"ri":"6","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","rn":"TestContentInstance","et":"29991231T111111"}}]
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_20_Discovery_with_limit_filter_criteria
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34232.
+2017-04-13 15:30:15+0100 [-] Message 'D\x01\x85\xb8\x00\x00o\xc6`]\x01ODL-oneM2M-CseJfu=1&lim=2\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fc6, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xb8\x00\x00o\xc6\xc0\xff[{"m2m:cb":{"ct":"20170413T143015","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170413T143015","rn":"ODL-oneM2M-Cse"}},{"m2m:acp":{"ct":"20170413T143015","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"3","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"_defaultACP","et":"29991231T111111"}}]' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34232
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34232.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fc6, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: [{"m2m:cb":{"ct":"20170413T143015","srt":[5,2,3,4,23,9,14,1],"cst":"IN-CSE","ty":5,"ri":"2","csi":"ODL-oneM2M-Cse","lt":"20170413T143015","rn":"ODL-oneM2M-Cse"}},{"m2m:acp":{"ct":"20170413T143015","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"3","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"_defaultACP","et":"29991231T111111"}}]
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_21_Discovery_with_multiple_filter_criteria
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34233.
+2017-04-13 15:30:15+0100 [-] Message 'D\x01\x85\xb9\x00\x00o\xc7`]\x01ODL-oneM2M-CseM\tfu=1&lbl=key1&lbl=key2\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fc7, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xb9\x00\x00o\xc7\xc0\xff[]' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34233
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34233.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fc7, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: []
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_22_Create_Subscription
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34234.
+2017-04-13 15:30:15+0100 [-] Message 'D\x02\x85\xba\x00\x00o\xc89127.0.0.1B\x163M\x16ODL-oneM2M-Cse/TestAE/TestContainer\x1125ty=23\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x17\xff{\n    "m2m:sub": {\n        "nu": [\n            "http://localhost' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fc8, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd_\x85\xba\x00\x00o\xc8\xd1\x0e\n' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34234
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34234.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fc8, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending next block of blockwise request.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange added, Message ID: 34235.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Message 'D\x02\x85\xbb\x00\x00o\xc99127.0.0.1B\x163M\x16ODL-oneM2M-Cse/TestAE/TestContainer\x1125ty=23\xc1\x12\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x17\xff"\n        ], \n        "rn": "TestSubscription"\n    }\n}' sent successfully
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending request - Token: 00006fc9, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dA\x85\xbb\x00\x00o\xc9\xc0\xd1\x02\x12\xff{"m2m:sub":{"ct":"20170413T143015","ty":23,"ri":"7","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34235
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34235.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fc9, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 0, size_exp = 2.
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.01 Created String: {"m2m:sub":{"ct":"20170413T143015","ty":23,"ri":"7","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_23_Retrieve_Subscription
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34236.
+2017-04-13 15:30:15+0100 [-] Message "D\x01\x85\xbc\x00\x00o\xca`]'ODL-oneM2M-Cse/TestAE/TestContainer/TestSubscription@\xdd\xe4\x00CSE3219/C9886\x1512345" sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fca, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xbc\x00\x00o\xca\xc0\xff{"m2m:sub":{"ct":"20170413T143015","ty":23,"nu":["http://localhost"],"ri":"7","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","rn":"TestSubscription","et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34236
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34236.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fca, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: {"m2m:sub":{"ct":"20170413T143015","ty":23,"nu":["http://localhost"],"ri":"7","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/5","rn":"TestSubscription","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_24_Update_Subscription
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34237.
+2017-04-13 15:30:15+0100 [-] Message 'D\x03\x85\xbd\x00\x00o\xcb9127.0.0.1B\x163M\'ODL-oneM2M-Cse/TestAE/TestContainer/TestSubscription\x112\xdd\xe7\x00CSE3219/C9886\x1512345\xff{\n    "m2m:sub": {}\n}' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fcb, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dD\x85\xbd\x00\x00o\xcb\xc0\xff{"m2m:sub":{"lt":"20170413T143015"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34237
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34237.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fcb, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.04 Changed String: {"m2m:sub":{"lt":"20170413T143015"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_25_Delete_Subscription - skipped
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_26_Create_AccessControlPolicy
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34238.
+2017-04-13 15:30:15+0100 [-] Message 'D\x02\x85\xbe\x00\x00o\xcc9127.0.0.1B\x163M\x08ODL-oneM2M-Cse/TestAE\x1124ty=1\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x01\xff{\n"m2m:acp":{\n"pv":{\n"acr":[\n{\n"acop":63,\n"acor":[\n"*"\n]\n}\n]\n},\n' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fcc, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd_\x85\xbe\x00\x00o\xcc\xd1\x0e\n' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34238
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34238.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fcc, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending next block of blockwise request.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange added, Message ID: 34239.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Message 'D\x02\x85\xbf\x00\x00o\xcd9127.0.0.1B\x163M\x08ODL-oneM2M-Cse/TestAE\x1124ty=1\xc1\x1a\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x01\xff"pvs":{\n"acr":[\n{\n"acop":63,\n"acor":[\n"admin"\n]\n}\n]\n},\n"rn":"Tes' sent successfully
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending request - Token: 00006fcd, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd_\x85\xbf\x00\x00o\xcd\xd1\x0e\x1a' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34239
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34239.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fcd, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 1, size_exp = 2.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending next block of blockwise request.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange added, Message ID: 34240.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Message 'D\x02\x85\xc0\x00\x00o\xce9127.0.0.1B\x163M\x08ODL-oneM2M-Cse/TestAE\x1124ty=1\xc1"\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x01\xfftACP"\n}\n}' sent successfully
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending request - Token: 00006fce, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dA\x85\xc0\x00\x00o\xce\xc0\xd1\x02"\xff{"m2m:acp":{"ct":"20170413T143015","ty":1,"ri":"8","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/4","et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34240
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34240.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fce, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 2, more = 0, size_exp = 2.
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.01 Created String: {"m2m:acp":{"ct":"20170413T143015","ty":1,"ri":"8","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/4","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_27_Retrieve_AccessControlPolicy
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34241.
+2017-04-13 15:30:15+0100 [-] Message 'D\x01\x85\xc1\x00\x00o\xcf`]\x10ODL-oneM2M-Cse/TestAE/TestACP@\xd5\xe4admin\x1512345' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fcf, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xc1\x00\x00o\xcf\xc0\xff{"m2m:acp":{"ct":"20170413T143015","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"8","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/4","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"TestACP","et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34241
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34241.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fcf, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: {"m2m:acp":{"ct":"20170413T143015","ty":1,"pv":{"acr":[{"acor":["*"],"acop":63}]},"ri":"8","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/4","pvs":{"acr":[{"acor":["admin"],"acop":63}]},"rn":"TestACP","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_28_Update_AccessControlPolicy
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34242.
+2017-04-13 15:30:15+0100 [-] Message 'D\x03\x85\xc2\x00\x00o\xd09127.0.0.1B\x163M\x10ODL-oneM2M-Cse/TestAE/TestACP\x112\xd1\x02\n\xd5\xd8admin\x1512345\xff{\n"m2m:acp":{\n"pv":{\n"acr":[\n{\n"acop":63,\n"acor":[\n"admin"\n]\n}\n]' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fd0, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd_\x85\xc2\x00\x00o\xd0\xd1\x0e\n' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34242
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34242.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fd0, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending next block of blockwise request.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange added, Message ID: 34243.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Message 'D\x03\x85\xc3\x00\x00o\xd19127.0.0.1B\x163M\x10ODL-oneM2M-Cse/TestAE/TestACP\x112\xd1\x02\x1a\xd5\xd8admin\x1512345\xff\n},\n"pvs":{\n"acr":[\n{\n"acop":63,\n"acor":[\n"admin"\n]\n}\n]\n},\n"rn":' sent successfully
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending request - Token: 00006fd1, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd_\x85\xc3\x00\x00o\xd1\xd1\x0e\x1a' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34243
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34243.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fd1, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 1, size_exp = 2.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending next block of blockwise request.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange added, Message ID: 34244.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Message 'D\x03\x85\xc4\x00\x00o\xd29127.0.0.1B\x163M\x10ODL-oneM2M-Cse/TestAE/TestACP\x112\xd1\x02"\xd5\xd8admin\x1512345\xff"TestACP"\n}\n}' sent successfully
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending request - Token: 00006fd2, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd\x80\x85\xc4\x00\x00o\xd2\xc0\xd1\x02"\xff{"error":"Resource Name cannot be updated: ODL-oneM2M-Cse/TestAE/TestACP/TestACP"}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34244
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34244.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fd2, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 2, more = 0, size_exp = 2.
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 4.00 Bad Request String: {"error":"Resource Name cannot be updated: ODL-oneM2M-Cse/TestAE/TestACP/TestACP"}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_29_Delete_AccessControlPolicy - skipped
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_30_Unauthorized_operation - skipped
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_31_Create_Group
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34245.
+2017-04-13 15:30:15+0100 [-] Message 'D\x02\x85\xc5\x00\x00o\xd39127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1124ty=9\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\t\xff{\n    "m2m:grp": {\n        "mid": [\n            "a"\n        ], \n' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fd3, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd_\x85\xc5\x00\x00o\xd3\xd1\x0e\n' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34245
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34245.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fd3, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending next block of blockwise request.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange added, Message ID: 34246.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Message 'D\x02\x85\xc6\x00\x00o\xd49127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1124ty=9\xc1\x1a\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\t\xff        "mnm": 10, \n        "mt": 2, \n        "rn": "TestGroup"\n' sent successfully
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending request - Token: 00006fd4, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd_\x85\xc6\x00\x00o\xd4\xd1\x0e\x1a' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34246
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34246.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fd4, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 1, size_exp = 2.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending next block of blockwise request.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange added, Message ID: 34247.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Message 'D\x02\x85\xc7\x00\x00o\xd59127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1124ty=9\xc1"\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\t\xff    }\n}' sent successfully
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending request - Token: 00006fd5, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dA\x85\xc7\x00\x00o\xd5\xc0\xd1\x02"\xff{"m2m:grp":{"ct":"20170413T143015","cnm":1,"ty":9,"ri":"9","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34247
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34247.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fd5, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 2, more = 0, size_exp = 2.
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.01 Created String: {"m2m:grp":{"ct":"20170413T143015","cnm":1,"ty":9,"ri":"9","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_32_Retrieve_Group
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34248.
+2017-04-13 15:30:15+0100 [-] Message 'D\x01\x85\xc8\x00\x00o\xd6`]\x0bODL-oneM2M-Cse/TestGroup@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fd6, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xc8\x00\x00o\xd6\xc0\xff{"m2m:grp":{"ct":"20170413T143015","cnm":1,"ty":9,"mt":2,"ri":"9","lt":"20170413T143015","mid":["a"],"pi":"/ODL-oneM2M-Cse/2","rn":"TestGroup","mnm":10,"et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34248
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34248.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fd6, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: {"m2m:grp":{"ct":"20170413T143015","cnm":1,"ty":9,"mt":2,"ri":"9","lt":"20170413T143015","mid":["a"],"pi":"/ODL-oneM2M-Cse/2","rn":"TestGroup","mnm":10,"et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_33_Update_Group
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34249.
+2017-04-13 15:30:15+0100 [-] Message 'D\x03\x85\xc9\x00\x00o\xd79127.0.0.1B\x163M\x0bODL-oneM2M-Cse/TestGroup\x112\xdd\xe7\x00CSE3219/C9886\x1512345\xff{\n    "m2m:grp": {}\n}' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fd7, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd\xa0\x85\xc9\x00\x00o\xd7\xc0\xff{"error":"RPC exception:java.lang.NullPointerException"}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34249
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34249.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fd7, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 5.00 Internal Server Error String: {"error":"RPC exception:java.lang.NullPointerException"}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_34_Delete_Group - skipped
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_35_Create_Node
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34250.
+2017-04-13 15:30:15+0100 [-] Message 'D\x02\x85\xca\x00\x00o\xd89127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1125ty=14\xc1\n\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x0e\xff{\n    "m2m:nod": {\n        "ni": "a", \n        "rn": "TestNode"\n' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fd8, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'd_\x85\xca\x00\x00o\xd8\xd1\x0e\n' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34250
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34250.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fd8, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 0, more = 1, size_exp = 2.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending next block of blockwise request.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange added, Message ID: 34251.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Message 'D\x02\x85\xcb\x00\x00o\xd99127.0.0.1B\x163M\x01ODL-oneM2M-Cse\x1125ty=14\xc1\x12\xdd\xd8\x00CSE3219/C9886\x1512345\xa1\x0e\xff    }\n}' sent successfully
+2017-04-13 15:30:15+0100 [Coap (UDP)] Sending request - Token: 00006fd9, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dA\x85\xcb\x00\x00o\xd9\xc0\xd1\x02\x12\xff{"m2m:nod":{"ct":"20170413T143015","ty":14,"ri":"a","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34251
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34251.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fd9, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Response with Block1 option received, number = 1, more = 0, size_exp = 2.
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.01 Created String: {"m2m:nod":{"ct":"20170413T143015","ty":14,"ri":"a","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_36_Retrieve_Node
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34252.
+2017-04-13 15:30:15+0100 [-] Message 'D\x01\x85\xcc\x00\x00o\xda`]\nODL-oneM2M-Cse/TestNode@\xdd\xe4\x00CSE3219/C9886\x1512345' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fda, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dE\x85\xcc\x00\x00o\xda\xc0\xff{"m2m:nod":{"ct":"20170413T143015","ty":14,"ri":"a","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","ni":"a","rn":"TestNode","et":"29991231T111111"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34252
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34252.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fda, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.05 Content String: {"m2m:nod":{"ct":"20170413T143015","ty":14,"ri":"a","lt":"20170413T143015","pi":"/ODL-oneM2M-Cse/2","ni":"a","rn":"TestNode","et":"29991231T111111"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_37_Update_Node
+2017-04-13 15:30:15+0100 [-] Sending message to 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [-] Exchange added, Message ID: 34253.
+2017-04-13 15:30:15+0100 [-] Message 'D\x03\x85\xcd\x00\x00o\xdb9127.0.0.1B\x163M\nODL-oneM2M-Cse/TestNode\x112\xdd\xe7\x00CSE3219/C9886\x1512345\xff{\n    "m2m:nod": {}\n}' sent successfully
+2017-04-13 15:30:15+0100 [-] Sending request - Token: 00006fdb, Host: 127.0.0.1, Port: 5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received 'dD\x85\xcd\x00\x00o\xdb\xc0\xff{"m2m:nod":{"lt":"20170413T143015"}}' from 127.0.0.1:5683
+2017-04-13 15:30:15+0100 [Coap (UDP)] Incoming Message ID: 34253
+2017-04-13 15:30:15+0100 [Coap (UDP)] New unique ACK or RST message received
+2017-04-13 15:30:15+0100 [Coap (UDP)] Exchange removed, Message ID: 34253.
+2017-04-13 15:30:15+0100 [Coap (UDP)] Received Response, token: 00006fdb, host: 127.0.0.1, port: 5683
+2017-04-13 15:30:15+0100 [-] Completed
+2017-04-13 15:30:15+0100 [-] Result - Code: 2.04 Changed String: {"m2m:nod":{"lt":"20170413T143015"}}
+2017-04-13 15:30:15+0100 [-] test_TD_M2M_NH_38_Delete_Node - skipped
+2017-04-13 15:30:15+0100 [-] Stop reactor
 .
-----------------------------------------------------------------------2017-04-06 17:31:38+0100 [Coap (UDP)] (UDP Port 53481 Closed)
+----------------------------------------------------------------------2017-04-13 15:30:15+0100 [Coap (UDP)] (UDP Port 42937 Closed)
 
-Ran 1 test in 0.691s2017-04-06 17:31:38+0100 [Coap (UDP)] Stopping protocol <txThings.txthings.coap.Coap instance at 0x7f9429617248>
+2017-04-13 15:30:15+0100 [Coap (UDP)] Stopping protocol <txThings.txthings.coap.Coap instance at 0x7efea489a200>
+Ran 1 test in 0.477s
+2017-04-13 15:30:15+0100 [-] Main loop terminated.
 
-
-2017-04-06 17:31:38+0100 [-] Main loop terminated.
 OK
-billf@billfdevhp:~/iotdm/iotdm-pyclient$ 
 
