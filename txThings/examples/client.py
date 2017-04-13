@@ -57,6 +57,7 @@ class Agent():
             print "Invalid operation"
             sys.exit(2)
         syncEvent.wait()
+        return (coap.responses[self.response.code], self.response.payload)
 
     def postResource(self):
 
@@ -77,7 +78,7 @@ class Agent():
         request.opt.oneM2M_TY = self.ty
         request.remote = (self.host, coap.COAP_PORT)
         d = self.protocol.request(request)
-        d.addCallback(self.printResponse)
+        d.addCallback(self.haveResponse)
         d.addErrback(self.noResponse)
         d.addBoth(self.releaseBlocking)
 
@@ -98,7 +99,7 @@ class Agent():
         request.opt.observe = 0
         request.remote = (self.host, coap.COAP_PORT)
         d = self.protocol.request(request)
-        d.addCallback(self.printResponse)
+        d.addCallback(self.haveResponse)
         d.addErrback(self.noResponse)
         d.addBoth(self.releaseBlocking)
 
@@ -120,7 +121,7 @@ class Agent():
             request.opt.oneM2M_RQI = ("12345",)
         request.remote = (self.host, coap.COAP_PORT)
         d = self.protocol.request(request)
-        d.addCallback(self.printResponse)
+        d.addCallback(self.haveResponse)
         d.addErrback(self.noResponse)
         d.addBoth(self.releaseBlocking)
 
@@ -139,22 +140,23 @@ class Agent():
         request.opt.observe = 0
         request.remote = (self.host, coap.COAP_PORT)
         d = self.protocol.request(request)
-        d.addCallback(self.printResponse)
+        d.addCallback(self.haveResponse)
         d.addErrback(self.noResponse)
         d.addBoth(self.releaseBlocking)
 
     def gotIP(ip):
         return ip
 
-    def printResponse(self, response):
-        print 'Response Code: ' + coap.responses[response.code]
-        print 'Payload: ' + response.payload
+    def haveResponse(self, response):
+        self.response = response
+        # print 'Response Code: ' + coap.responses[response.code]
+        # print 'Payload: ' + response.payload
 
     def noResponse(self, failure):
-        print 'Failed to fetch resource:'
-        print failure
+        self.response = None
+        raise Exception ('Failed to fetch resource: ' + failure)
 
     def releaseBlocking(self, _ ):
-        print 'Sync Event'
+        print 'Completed'
         syncEvent.set()
 
