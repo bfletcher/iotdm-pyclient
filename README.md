@@ -9,7 +9,7 @@ https://wiki.opendaylight.org/view/IoTDM:PythonAPI
 
 ## Installation and dependencies
 
-This library is  for Python 2.7
+This library is for Python 2.7
 
 The following Python dependencies exist:
 
@@ -20,28 +20,30 @@ The following Python dependencies exist:
 3. Twisted Library
 4. lxml Library
 
-The distribution directory ".idea" includes project files for the PyCharm IDE.
-
 
 ## Functionality and Limitations
 
-The distribution is a Python framework to support a oneM2M compatible IoT client with HTTP and CoAP protocol support. The API is limited in this version. Results of operations are not returned to the calling application (even success/failure indications).
+The distribution is a Python framework to support a oneM2M compatible IoT client with HTTP and CoAP protocol support. 
 API results are returned as (responseCode, responseString) for both http and CoAP requests.
 
 When using the CoAP protocol functions they block until a response has been received. To achieve this, the twisted reactor runs in a separate thread.
 
-Examples showing CoAP and HTTP may be seen at:
+Examples showing CoAP and HTTP may also be seen at:
 https://wiki.opendaylight.org/view/IoTDM:PythonAPI
-but note this does not show all necessary Python imports therefore it may be better to refer to the example scripts below. 
 
-## HTTP Examples 
+Note that the examples at Open Daylight do not show the return values from the API or the CoAP ```start()```, ```stop()``` calls.
 
 HTTP and CoAP support can be included by importing iotdm_api.py - see example usage in http_example.py or TS_13_Tests.py.
 
 To run the examples - install and start the IoTDM oneM2M server on localhost following the instructions at:
 https://wiki.opendaylight.org/view/IoTDM:Main#Getting_started_for_users
 
-Navigate to the root directory for the library. The HTTP examples may then be run using the command:
+Invoke the example commands below from the root directory for the library. 
+
+## HTTP Examples 
+
+
+The HTTP examples may be run using the command:
 ```
 python http_example.py
 ```
